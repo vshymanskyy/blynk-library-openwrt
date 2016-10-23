@@ -1,5 +1,4 @@
-# OpenWRT-Blynk-packages
-Blynk package for OpenWRT
+# Blynk-library OpenWRT package
 
 Build from source:
 

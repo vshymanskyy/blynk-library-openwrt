@@ -7,12 +7,15 @@ PKG_RELEASE:=1
 PKG_MAINTAINER:=Volodymyr Shymanskyy
 PKG_LICENSE:=MIT
 
+PKG_BUILD_PARALLEL:=1
+
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=git://github.com/blynkkk/blynk-library.git
 PKG_SOURCE_VERSION:=master
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION).tar.gz
 
+include $(INCLUDE_DIR)/uclibc++.mk
 include $(INCLUDE_DIR)/package.mk
 
 #define Build/Prepare
@@ -26,7 +29,7 @@ define Package/blynk
   CATEGORY:=Network
   TITLE:=Blynk App builder for IoT
   URL:=http://www.blynk.cc
-  DEPENDS:=+libpthread +libstdcpp
+  DEPENDS:=+libpthread $(CXX_DEPENDS)
 endef
 
 define Package/blynk/description
@@ -39,6 +42,7 @@ endef
 MAKE_PATH:=linux
 
 MAKE_FLAGS += LD="$(TARGET_CXX)"
+#TODO: add -fno-rtti
 
 define Package/blynk/install
 	$(INSTALL_DIR) $(1)/usr/bin

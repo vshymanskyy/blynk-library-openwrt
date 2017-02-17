@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=blynk
-PKG_VERSION:=0.3.11
+PKG_VERSION:=0.4.5
 PKG_RELEASE:=1
 
 PKG_MAINTAINER:=Volodymyr Shymanskyy
@@ -13,7 +13,7 @@ PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=git://github.com/blynkkk/blynk-library.git
 PKG_SOURCE_VERSION:=master
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_SOURCE_VERSION).tar.gz
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 
 include $(INCLUDE_DIR)/uclibc++.mk
 include $(INCLUDE_DIR)/package.mk
@@ -29,7 +29,7 @@ define Package/blynk
   CATEGORY:=Network
   TITLE:=Blynk App builder for IoT
   URL:=http://www.blynk.cc
-  DEPENDS:=+libpthread $(CXX_DEPENDS)
+  DEPENDS:=+libpthread +librt $(CXX_DEPENDS)
 endef
 
 define Package/blynk/description

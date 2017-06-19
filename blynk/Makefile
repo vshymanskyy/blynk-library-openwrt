@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=blynk
-PKG_VERSION:=0.4.5
+PKG_VERSION:=0.4.8
 PKG_RELEASE:=1
 
 PKG_MAINTAINER:=Volodymyr Shymanskyy

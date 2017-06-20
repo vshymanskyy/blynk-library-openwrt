@@ -9,7 +9,7 @@ echo "src-git blynk git://github.com/vshymanskyy/blynk-library-openwrt.git" >> .
 make menuconfig
 ```
 
-Select: Network -> Blynk -> blynk
+Select: ```Network -> Blynk -> blynk```
 
 ```bash
 make -j 5

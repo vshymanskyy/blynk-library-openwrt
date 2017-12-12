@@ -17,13 +17,12 @@ include $(INCLUDE_DIR)/package.mk
 $(call include_mk, python-package.mk)
 
 define Package/python-blynk-library
-  SUBMENU:=Python
-  SECTION:=lang
-  CATEGORY:=Languages
-  MAINTAINER:=Volodymyr Shymanskyy
-  TITLE:=Blynk client for Python
-  URL:=https://github.com/vshymanskyy/blynk-library-python
-  DEPENDS:=+python
+	SUBMENU:=Python
+	SECTION:=lang
+	CATEGORY:=Languages
+	TITLE:=Blynk client for Python
+	URL:=https://github.com/vshymanskyy/blynk-library-python
+	DEPENDS:=+python-light +python-codecs
 endef
 
 define Package/python-blynk-library/description
@@ -34,7 +33,7 @@ define Package/python-blynk-library/description
 endef
 
 define Build/Compile
-	$(call Build/Compile/PyMod,,install --prefix=/usr --root=$(PKG_INSTALL_DIR))
+	$(call Build/Compile/PyMod,,install --prefix="$(PKG_INSTALL_DIR)/usr")
 endef
 
 define Package/python-blynk-library/install

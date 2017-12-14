@@ -54,6 +54,30 @@ blynk.run()
 ```
 Network -> Blynk -> blynk
 ```
+C++ Example:
+```cpp
+#include <BlynkApiLinux.h>
+static BlynkTransportSocket blynkTransport;
+BlynkSocket Blynk(blynkTransport);
+
+const char* AUTH = "YourAuthToken";
+
+BLYNK_WRITE(V1)
+{
+    printf("Got a value: %s\n", param[0].asStr());
+}
+
+int main(int argc, char* argv[])
+{
+    Blynk.begin(auth);
+
+    while (true) {
+        Blynk.run();
+    }
+
+    return 0;
+}
+```
 
 ## Build OpenWRT image:
 ```bash

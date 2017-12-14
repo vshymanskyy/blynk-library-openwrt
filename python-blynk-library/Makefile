@@ -43,4 +43,6 @@ define Package/python-blynk-library/install
 	    $(1)$(PYTHON_PKG_DIR)
 endef
 
+$(eval $(call PyPackage,python-blynk-library))
 $(eval $(call BuildPackage,python-blynk-library))
+

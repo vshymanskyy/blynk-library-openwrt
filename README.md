@@ -18,12 +18,12 @@ Node.js Example:
 ```js
 const Blynk = require('blynk-library');
 
-# Initialize Blynk
+// Initialize Blynk
 let AUTH = 'YourAuthToken';
 let blynk = new Blynk.Blynk(AUTH);
 let v1 = new blynk.VirtualPin(1);
 
-# Register virtual pin handler
+// Register virtual pin handler
 v1.on('write', function(param) {
   console.log('V1:', param);
 });

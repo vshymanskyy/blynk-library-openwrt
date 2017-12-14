@@ -25,7 +25,7 @@ let v1 = new blynk.VirtualPin(1);
 
 // Register virtual pin handler
 v1.on('write', function(param) {
-  console.log('V1:', param);
+    console.log('Got a value:', param);
 });
 ```
 
@@ -44,7 +44,7 @@ blynk = BlynkLib.Blynk(AUTH)
 # Register virtual pin handler
 @blynk.VIRTUAL_WRITE(1)
 def v1_write_handler(value):
-    print('Current slider value: {}'.format(value))
+    print('Got a value: {}'.format(value))
 
 # Start Blynk (this call should never return)
 blynk.run()
@@ -62,13 +62,11 @@ BlynkSocket Blynk(blynkTransport);
 
 const char* AUTH = "YourAuthToken";
 
-BLYNK_WRITE(V1)
-{
+BLYNK_WRITE(V1) {
     printf("Got a value: %s\n", param[0].asStr());
 }
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
     Blynk.begin(auth);
 
     while (true) {

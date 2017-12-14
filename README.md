@@ -1,4 +1,4 @@
-# Blynk-library OpenWRT package
+# Blynk OpenWRT package
 
 Build from source:
 
@@ -9,15 +9,32 @@ echo "src-git blynk git://github.com/vshymanskyy/blynk-library-openwrt.git" >> .
 make menuconfig
 ```
 
-Select: ```Network -> Blynk -> blynk```
+### C++ client
+```
+Network -> Blynk -> blynk
+```
 
+### Node.js client
+You need [nxhack openwrt-node](https://github.com/nxhack/openwrt-node-packages) for this.
+```
+Languages -> Node.js -> node-blynk-library
+```
+
+### Python 2.7 client
+```
+Languages -> Python -> python-blynk-library
+```
+
+## Build OpenWRT image:
 ```bash
 make -j 5
 ```
 
-To build just Blynk:
+## Build just Blynk:
 ```
 make package/blynk/compile V=s
+make package/node-blynk-library/compile V=s
+make package/python-blynk-library/compile V=s
 ```
 
 For a rebuild:

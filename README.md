@@ -11,9 +11,9 @@ make menuconfig
 
 ### Node.js client
 You need [nxhack openwrt-node](https://github.com/nxhack/openwrt-node-packages) for this.
-```
-Languages -> Node.js -> node-blynk-library
-```
+
+Select in menuconfig: ```Languages -> Node.js -> node-blynk-library```
+
 **Node.js** example:
 ```js
 const Blynk = require('blynk-library');
@@ -30,9 +30,9 @@ v1.on('write', function(param) {
 ```
 
 ### Python 2.7 client
-```
-Languages -> Python -> python-blynk-library
-```
+
+Select in menuconfig: ```Languages -> Python -> python-blynk-library```
+
 **Python** example:
 ```python
 import BlynkLib
@@ -51,9 +51,9 @@ blynk.run()
 ```
 
 ### C++ client
-```
-Network -> Blynk -> blynk
-```
+
+Select in menuconfig: ```Network -> Blynk -> blynk```
+
 **C++** example:
 ```cpp
 #include <BlynkApiLinux.h>

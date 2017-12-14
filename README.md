@@ -14,7 +14,7 @@ You need [nxhack openwrt-node](https://github.com/nxhack/openwrt-node-packages) 
 ```
 Languages -> Node.js -> node-blynk-library
 ```
-Node.js Example:
+**Node.js** example:
 ```js
 const Blynk = require('blynk-library');
 
@@ -33,7 +33,7 @@ v1.on('write', function(param) {
 ```
 Languages -> Python -> python-blynk-library
 ```
-Python Example:
+**Python** example:
 ```python
 import BlynkLib
 
@@ -54,7 +54,7 @@ blynk.run()
 ```
 Network -> Blynk -> blynk
 ```
-C++ Example:
+**C++** example:
 ```cpp
 #include <BlynkApiLinux.h>
 static BlynkTransportSocket blynkTransport;
@@ -67,7 +67,7 @@ BLYNK_WRITE(V1) {
 }
 
 int main(int argc, char* argv[]) {
-    Blynk.begin(auth);
+    Blynk.begin(AUTH);
 
     while (true) {
         Blynk.run();

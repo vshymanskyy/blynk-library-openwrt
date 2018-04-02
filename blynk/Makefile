@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=blynk
-PKG_VERSION:=0.5.0
+PKG_VERSION:=0.5.2
 PKG_RELEASE:=1
 
 PKG_MAINTAINER:=Volodymyr Shymanskyy
@@ -11,7 +11,7 @@ PKG_BUILD_PARALLEL:=1
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_URL:=git://github.com/blynkkk/blynk-library.git
-PKG_SOURCE_VERSION:=v0.5.0
+PKG_SOURCE_VERSION:=v0.5.2
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
 
